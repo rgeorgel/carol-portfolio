@@ -5,6 +5,7 @@ import image_da18bbaec2a99d4e43fa85fd83de228c69da278e from '../assets/da18bbaec2
 import image_61ef1f1c04055b9f2cbbf1d31f28fc6cf8457c2c from '../assets/61ef1f1c04055b9f2cbbf1d31f28fc6cf8457c2c.png';
 import image_5788202aefc15d1d41d7724b014059bd653d0a70 from '../assets/5788202aefc15d1d41d7724b014059bd653d0a70.png';
 import image_IMG_4392 from '../assets/IMG_4392.png';
+import resumePDF from '../assets/CarolChang_CV.pdf';
 import { useState } from 'react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
@@ -23,7 +24,8 @@ export default function App() {
 
         <div className="pointer-events-auto">
           <a
-            href="mailto:hello@alexmorgan.design"
+            href={resumePDF}
+            download="CarolChang_CV.pdf"
             className="border border-[#F2F0E9] rounded-full px-6 py-2 font-mono text-xs uppercase tracking-widest hover:bg-[#F2F0E9] hover:text-[#080808] transition-all duration-300"
           >RESUME</a>
         </div>
