@@ -7,6 +7,7 @@ import image_5788202aefc15d1d41d7724b014059bd653d0a70 from '../assets/5788202aef
 import { useState } from 'react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
+
 export default function App() {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
