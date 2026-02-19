@@ -4,6 +4,7 @@ import image_bdfd60a65603aefb9850aa2e07301fe168782c60 from '../assets/bdfd60a656
 import image_da18bbaec2a99d4e43fa85fd83de228c69da278e from '../assets/da18bbaec2a99d4e43fa85fd83de228c69da278e.png';
 import image_61ef1f1c04055b9f2cbbf1d31f28fc6cf8457c2c from '../assets/61ef1f1c04055b9f2cbbf1d31f28fc6cf8457c2c.png';
 import image_5788202aefc15d1d41d7724b014059bd653d0a70 from '../assets/5788202aefc15d1d41d7724b014059bd653d0a70.png';
+import image_IMG_4392 from '../assets/IMG_4392.png';
 import { useState } from 'react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 
@@ -46,10 +47,10 @@ export default function App() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] w-full mb-full relative overflow-hidden bg-[#e5e2d9]">
+          <div className="h-full w-full mb-full relative overflow-hidden bg-[#e5e2d9]">
             <img
               src={image_5788202aefc15d1d41d7724b014059bd653d0a70}
-              className="w-full h-auto hover:scale-[1.02] transition-all duration-500"
+              className="w-full h-full object-cover hover:scale-[1.02] transition-all duration-500"
               alt="Vanguard Interface Hero"
             />
           </div>
@@ -251,7 +252,7 @@ export default function App() {
                 <section className="mb-24">
           <div className="aspect-[21/9] w-full mb-24 relative overflow-hidden bg-[#e5e2d9]">
             <img
-              src={image_5788202aefc15d1d41d7724b014059bd653d0a70}
+              src={image_IMG_4392}
               className="w-full h-auto hover:scale-[1.02] transition-all duration-500"
               alt="Vanguard Interface Hero"
             />
