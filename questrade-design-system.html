@@ -10,21 +10,7 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <!-- Password gate (hidden after correct password) -->
-  <div id="password-gate" class="password-gate" aria-label="Enter password to view this case study">
-    <div class="password-gate-inner">
-      <p class="password-gate-title">QUESTRADE DESIGN SYSTEM</p>
-      <p class="password-gate-hint">This case study is password-protected.</p>
-      <form id="password-form" class="password-gate-form" autocomplete="off">
-        <label for="password-input" class="visually-hidden">Password</label>
-        <input type="password" id="password-input" class="password-gate-input" placeholder="Enter password" required autocomplete="off" />
-        <button type="submit" class="password-gate-btn">View case study</button>
-      </form>
-      <p id="password-error" class="password-gate-error" aria-live="polite" hidden>Incorrect password. Please try again.</p>
-    </div>
-  </div>
-
-  <div class="page case-study-page" id="case-study-content">
+  <div class="page case-study-page">
     <!-- Header (same as home) -->
     <header class="header">
       <a href="index.html" class="logo-role">
@@ -268,37 +254,6 @@
   </div>
 
   <script>
-    (function () {
-      var STORAGE_KEY = 'questrade_unlocked';
-      var PASS = '2901';
-      var gate = document.getElementById('password-gate');
-      var content = document.getElementById('case-study-content');
-      var form = document.getElementById('password-form');
-      var input = document.getElementById('password-input');
-      var errorEl = document.getElementById('password-error');
-
-      if (sessionStorage.getItem(STORAGE_KEY)) {
-        gate.classList.add('is-hidden');
-        content.classList.remove('is-hidden');
-        return;
-      }
-
-      content.classList.add('is-hidden');
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        errorEl.hidden = true;
-        if (input.value === PASS) {
-          sessionStorage.setItem(STORAGE_KEY, '1');
-          gate.classList.add('is-hidden');
-          content.classList.remove('is-hidden');
-        } else {
-          errorEl.hidden = false;
-          input.value = '';
-          input.focus();
-        }
-      });
-    })();
     (function () {
       var el = document.querySelector('.logo-role');
       var eyes = el && el.querySelector('.logo-eyes-egg');
