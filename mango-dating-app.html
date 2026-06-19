@@ -11,13 +11,10 @@
 </head>
 <body>
   <div class="page case-study-page">
+    <!-- Header (same as home) -->
     <header class="header">
       <a href="index.html" class="logo-role">
-        <span class="logo-eyes-egg" aria-hidden="true">
-          <span class="logo-eye"><span class="logo-eye-pupil"></span></span>
-          <span class="logo-eye"><span class="logo-eye-pupil"></span></span>
-        </span>
-        <p class="logo-name">CAROL CHANG</p>
+<p class="logo-name">CAROL CHANG</p>
         <p class="logo-role-text">Product Designer</p>
       </a>
       <a href="assets/CarolChang_CV.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">RESUME<svg class="btn-resume-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.5855 9.39779L10.523 14.4603C10.4174 14.5658 10.2743 14.6251 10.125 14.6251C9.97573 14.6251 9.83258 14.5658 9.72703 14.4603C9.62148 14.3547 9.56219 14.2116 9.56219 14.0623C9.56219 13.9131 9.62148 13.7699 9.72703 13.6644L13.8298 9.56232H2.8125C2.66332 9.56232 2.52024 9.50306 2.41475 9.39757C2.30926 9.29208 2.25 9.14901 2.25 8.99982C2.25 8.85064 2.30926 8.70757 2.41475 8.60208C2.52024 8.49659 2.66332 8.43732 2.8125 8.43732H13.8298L9.72703 4.33529C9.62148 4.22975 9.56219 4.08659 9.56219 3.93732C9.56219 3.78806 9.62148 3.6449 9.72703 3.53936C9.83258 3.43381 9.97573 3.37451 10.125 3.37451C10.2743 3.37451 10.4174 3.43381 10.523 3.53936L15.5855 8.60186C15.6378 8.6541 15.6793 8.71613 15.7076 8.78442C15.7359 8.85271 15.7504 8.9259 15.7504 8.99982C15.7504 9.07375 15.7359 9.14694 15.7076 9.21523C15.6793 9.28351 15.6378 9.34555 15.5855 9.39779Z" fill="currentColor"/></svg></a>
@@ -26,26 +23,37 @@
         <a href="index.html#about">ABOUT</a>
         <a href="index.html#contact">CONTACT</a>
       </nav>
-      <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </header>
 
-    <!-- Mobile nav overlay -->
-    <nav class="mobile-nav" aria-hidden="true">
-      <button class="mobile-nav-close" aria-label="Close menu">
-        <span></span>
-        <span></span>
-      </button>
-      <a href="index.html#work">WORK</a>
-      <a href="index.html#about">ABOUT</a>
-      <a href="index.html#contact">CONTACT</a>
-      <a href="assets/CarolChang_CV.pdf" class="mobile-nav-resume" target="_blank" rel="noopener noreferrer">RESUME<svg class="btn-resume-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.5855 9.39779L10.523 14.4603C10.4174 14.5658 10.2743 14.6251 10.125 14.6251C9.97573 14.6251 9.83258 14.5658 9.72703 14.4603C9.62148 14.3547 9.56219 14.2116 9.56219 14.0623C9.56219 13.9131 9.62148 13.7699 9.72703 13.6644L13.8298 9.56232H2.8125C2.66332 9.56232 2.52024 9.50306 2.41475 9.39757C2.30926 9.29208 2.25 9.14901 2.25 8.99982C2.25 8.85064 2.30926 8.70757 2.41475 8.60208C2.52024 8.49659 2.66332 8.43732 2.8125 8.43732H13.8298L9.72703 4.33529C9.62148 4.22975 9.56219 4.08659 9.56219 3.93732C9.56219 3.78806 9.62148 3.6449 9.72703 3.53936C9.83258 3.43381 9.97573 3.37451 10.125 3.37451C10.2743 3.37451 10.4174 3.43381 10.523 3.53936L15.5855 8.60186C15.6378 8.6541 15.6793 8.71613 15.7076 8.78442C15.7359 8.85271 15.7504 8.9259 15.7504 8.99982C15.7504 9.07375 15.7359 9.14694 15.7076 9.21523C15.6793 9.28351 15.6378 9.34555 15.5855 9.39779Z" fill="currentColor"/></svg></a>
-    </nav>
+    <div class="nav-overlay" aria-hidden="true">
+      <div class="nav-overlay-top">
+        <a href="index.html" class="logo-role">
+          <p class="logo-name">CAROL CHANG</p>
+          <p class="logo-role-text">Product Designer</p>
+        </a>
+        <button class="nav-overlay-close" aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4 4L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav-overlay-links">
+        <a href="index.html#work">WORK</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#contact">CONTACT</a>
+        <a href="assets/CarolChang_CV.pdf" class="nav-overlay-resume" target="_blank" rel="noopener noreferrer">
+          RESUME
+          <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.5855 9.39779L10.523 14.4603C10.4174 14.5658 10.2743 14.6251 10.125 14.6251C9.97573 14.6251 9.83258 14.5658 9.72703 14.4603C9.62148 14.3547 9.56219 14.2116 9.56219 14.0623C9.56219 13.9131 9.62148 13.7699 9.72703 13.6644L13.8298 9.56232H2.8125C2.66332 9.56232 2.52024 9.50306 2.41475 9.39757C2.30926 9.29208 2.25 9.14901 2.25 8.99982C2.25 8.85064 2.30926 8.70757 2.41475 8.60208C2.52024 8.49659 2.66332 8.43732 2.8125 8.43732H13.8298L9.72703 4.33529C9.62148 4.22975 9.56219 4.08659 9.56219 3.93732C9.56219 3.78806 9.62148 3.6449 9.72703 3.53936C9.83258 3.43381 9.97573 3.37451 10.125 3.37451C10.2743 3.37451 10.4174 3.43381 10.523 3.53936L15.5855 8.60186C15.6378 8.6541 15.6793 8.71613 15.7076 8.78442C15.7359 8.85271 15.7504 8.9259 15.7504 8.99982C15.7504 9.07375 15.7359 9.14694 15.7076 9.21523C15.6793 9.28351 15.6378 9.34555 15.5855 9.39779Z" fill="currentColor"/></svg>
+        </a>
+      </nav>
+    </div>
 
     <main class="case-study">
+      <!-- Hero -->
       <section class="case-hero">
         <p class="case-meta">02 / ONLINE DATING / 2022</p>
         <div class="case-hero-title-row">
@@ -57,10 +65,12 @@
         </div>
       </section>
 
+      <!-- Main image -->
       <section class="case-section">
         <img src="assets/use-case-mango-img-1.png" alt="Mango Dating App screens" class="case-img case-img-main" />
       </section>
 
+      <!-- THE BRIEF + OVERVIEW -->
       <section class="case-section case-section-2col">
         <div class="case-col">
           <p class="case-label">THE BRIEF</p>
@@ -74,6 +84,7 @@
         </div>
       </section>
 
+      <!-- THE CHALLENGE + THE SOLUTION -->
       <section class="case-section case-cards">
         <div class="case-card">
           <p class="case-card-label">THE CHALLENGE</p>
@@ -87,6 +98,7 @@
         </div>
       </section>
 
+      <!-- THE RESEARCH -->
       <section class="case-section">
         <div class="case-divider" aria-hidden="true"></div>
         <div class="case-section-2col case-content">
@@ -95,10 +107,12 @@
         </div>
       </section>
 
+      <!-- Mango image 2 -->
       <section class="case-section">
         <img src="assets/use-case-mango-img-2.png" alt="Mango research" class="case-img case-img-full" />
       </section>
 
+      <!-- Three problems -->
       <section class="case-section case-problems">
         <p class="case-body case-body-wide">We saw three significant problems:</p>
         <p class="case-body case-body-wide"><strong>Too many matches:</strong> People who get too many matches also get frustrated and get lost in conversations. Ghostings are frequent, and chatting ends up being superficial or non-existent.</p>
@@ -106,6 +120,7 @@
         <p class="case-body case-body-wide"><strong>All dating apps feel the same:</strong> After the invention of the swipe, virtually all dating apps feel the same.</p>
       </section>
 
+      <!-- COMPETITIVE ANALYSIS -->
       <section class="case-section">
         <div class="case-divider" aria-hidden="true"></div>
         <div class="case-section-2col case-content">
@@ -115,6 +130,7 @@
         <img src="assets/use-case-mango-img-3.png" alt="Competitive analysis" class="case-img case-img-full" />
       </section>
 
+      <!-- SITE MAP -->
       <section class="case-section">
         <div class="case-divider" aria-hidden="true"></div>
         <div class="case-section-2col case-content">
@@ -127,6 +143,7 @@
         <img src="assets/use-case-mango-img-4.png" alt="Site map" class="case-img case-img-full" />
       </section>
 
+      <!-- Wireframe -->
       <section class="case-section">
         <div class="case-divider" aria-hidden="true"></div>
         <div class="case-section-2col case-content">
@@ -139,6 +156,7 @@
         <img src="assets/use-case-mango-img-5.png" alt="Wireframes" class="case-img case-img-full" />
       </section>
 
+      <!-- THE FINAL RESULT (gif left, text right) -->
       <section class="case-section case-final-row">
         <div class="case-final-gif">
           <img src="assets/keyn.gif" alt="Wireframe detail" class="case-img case-img-small" />
@@ -153,6 +171,7 @@
         <img src="assets/use-case-mango-img-6.png" alt="Final result" class="case-img case-img-full" />
       </section>
 
+      <!-- VIEW NEXT PROJECT -->
       <div class="case-divider" aria-hidden="true"></div>
       <section class="case-section case-next">
         <h2 class="case-next-title">VIEW NEXT PROJECT</h2>
@@ -163,52 +182,78 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <p>© 2026 Carol Chang</p>
       <a href="https://www.linkedin.com/in/carolklchang/" target="_blank" rel="noopener noreferrer">Linkedin</a>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    // Hero on load
+    gsap.from(['.case-meta', '.case-title', '.case-role'], {
+      opacity: 0, y: 30, duration: 0.8, ease: 'power2.out', stagger: 0.15, delay: 0.1,
+    });
+
+    // Images
+    gsap.utils.toArray('.case-img, .case-img-left-img').forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 90%' },
+        opacity: 0, y: 40, duration: 0.8, ease: 'power2.out',
+      });
+    });
+
+    // Cards
+    gsap.from('.case-card', {
+      scrollTrigger: { trigger: '.case-cards', start: 'top 85%' },
+      opacity: 0, y: 36, duration: 0.7, ease: 'power2.out', stagger: 0.15,
+    });
+
+    // Result stats
+    gsap.from('.case-result-card', {
+      scrollTrigger: { trigger: '.case-results-grid', start: 'top 85%' },
+      opacity: 0, y: 36, duration: 0.7, ease: 'power2.out', stagger: 0.15,
+    });
+
+    // View next
+    gsap.from(['.case-next-title', '.case-next-btn'], {
+      scrollTrigger: { trigger: '.case-next', start: 'top 88%' },
+      opacity: 0, y: 24, duration: 0.7, ease: 'power2.out', stagger: 0.15,
+    });
+  </script>
   <script>
     (function () {
-      var btn = document.querySelector('.hamburger-btn');
-      var nav = document.querySelector('.mobile-nav');
-      if (!btn || !nav) return;
-      function openMenu() { btn.classList.add('is-open'); nav.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); nav.setAttribute('aria-hidden', 'false'); }
-      function closeMenu() { btn.classList.remove('is-open'); nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); nav.setAttribute('aria-hidden', 'true'); }
-      btn.addEventListener('click', function () { btn.classList.contains('is-open') ? closeMenu() : openMenu(); });
-      var closeBtn = nav.querySelector('.mobile-nav-close');
-      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-      nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-    })();
-    (function () {
-      var el = document.querySelector('.logo-role');
-      var eyes = el && el.querySelector('.logo-eyes-egg');
-      if (!el || !eyes) return;
-      document.body.appendChild(eyes);
-      var range = 4;
-      var halfW = 17;
-      var halfH = 5;
-      function update(e) {
-        var rect = el.getBoundingClientRect();
-        var inLogo = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
-        if (inLogo) {
-          eyes.style.left = (e.clientX - halfW) + 'px';
-          eyes.style.top = (e.clientY - halfH) + 'px';
-          eyes.style.opacity = '1';
-          var w = rect.width;
-          var x = e.clientX - rect.left;
-          var p = w > 0 ? (x / w) * 2 - 1 : 0;
-          el.style.setProperty('--eye-x', (p * range) + 'px');
-        } else {
-          eyes.style.opacity = '0';
-          el.style.setProperty('--eye-x', '0px');
-        }
+      var hamburger = document.querySelector('.nav-hamburger');
+      var overlay = document.querySelector('.nav-overlay');
+      var closeBtn = document.querySelector('.nav-overlay-close');
+      var overlayLinks = document.querySelectorAll('.nav-overlay-links a');
+      function openMenu() {
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
       }
-      document.addEventListener('mousemove', update);
-      el.addEventListener('mouseleave', function () {
-        eyes.style.opacity = '0';
-        el.style.setProperty('--eye-x', '0px');
-      });
+      function closeMenu() {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      hamburger.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlayLinks.forEach(function (link) { link.addEventListener('click', closeMenu); });
     })();
   </script>
 </body>
